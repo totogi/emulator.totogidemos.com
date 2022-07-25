@@ -1,6 +1,6 @@
 import moment from 'moment'
 
-const baseUrl = 'https://mwcl3useast1-lb-0-1783933148.us-east-1.elb.amazonaws.com'
+const baseUrl = 'https://mwcl3useast1-lb-0-1783933148.us-east-1.elb.amazonaws.com/nchf-convergedcharging/v3/chargingData'
 
 export async function isoUtcNow () {
   const now = moment.utc().format('YYYY-MM-DDTHH:mm:ss.SSS') + 'Z'
