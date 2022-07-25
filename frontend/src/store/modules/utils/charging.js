@@ -1,9 +1,6 @@
 import moment from 'moment'
 
-const hostname = 'lb0prod.dev.ccab.devfactory.com'
-const protocol = 'https:'
-const basePath = '/nchf-convergedcharging/v3/chargingData'
-const baseUrl = protocol + '//' + hostname + basePath
+const baseUrl = 'https://mwcl3useast1-lb-0-1783933148.us-east-1.elb.amazonaws.com'
 
 export async function isoUtcNow () {
   const now = moment.utc().format('YYYY-MM-DDTHH:mm:ss.SSS') + 'Z'
