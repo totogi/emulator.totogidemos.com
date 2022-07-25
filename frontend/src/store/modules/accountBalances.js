@@ -102,6 +102,15 @@ export default {
           }
         }
       }
+      // Setting Monetary account balance
+      try {
+        const currentMonetaryBalance = balanceData.balance.Monetary.total
+        context.commit('setCurrentMonetaryBalance', currentMonetaryBalance.toString())
+      } catch (e) {
+        console.log('Real Error setting Data balance')
+        console.log(e)
+        context.commit('setAccountDeviceError', true)
+      }
     }
   }
 }

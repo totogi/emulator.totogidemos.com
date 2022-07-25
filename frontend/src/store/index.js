@@ -31,6 +31,7 @@ export default createStore({
       currentSmsBalance: 'loading...',
       currentVoiceBalanceMinutes: 'loading...',
       currentDataBalanceMb: 'loading...',
+      currentMonetaryBalance: 'loading...',
       planVersionSmsAllocation: null,
       planVersionVoiceAllocationMinutes: null,
       planVersionDataAllocationMb: null,
@@ -102,6 +103,9 @@ export default createStore({
     },
     setCurrentDataBalanceMb (state, currentDataBalanceMb) {
       state.currentDataBalanceMb = currentDataBalanceMb
+    },
+    setCurrentMonetaryBalance (state, currentMonetaryBalance) {
+      state.currentMonetaryBalance = currentMonetaryBalance
     },
     setCurrentPlanInformation (state, currentPlanInformation) {
       state.currentPlanInformation = currentPlanInformation

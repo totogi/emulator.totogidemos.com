@@ -2,7 +2,7 @@
 <div>
   <CContainer fluid>
     <CRow>
-      <CCol :xs="2"></CCol>
+      <CCol :xs="1"></CCol>
       <!-- VOICE -->
       <CCol :xs="2">
         <!-- If we have an Unlimited Voice allocation -->
@@ -101,7 +101,7 @@
         </DoughnutChart>
       </CCol>
       <!-- DATA: ZERO RATED -->
-      <CCol :xs="3">
+      <CCol :xs="2">
         <!-- If we have zero rated data on the plan -->
         <CCard v-if="$store.state.zeroRatedData">
           <div class='title'>Zero-rated Data (MB)</div>
@@ -138,7 +138,18 @@
           </CCardBody>
         </CCard>
       </CCol>
-      <CCol :xs="2"></CCol>
+      <!-- MONETARY BALANCE -->
+      <CCol :xs="2">
+        <CCard>
+          <div class='title'>Balance:</div>
+          <CIcon :icon="cilMoney" height="36"/>
+          <CCol :xs="12">
+            $ {{ $store.state.currentMonetaryBalance }}
+          </CCol>
+          <br />
+        </CCard>
+      </CCol>
+      <CCol :xs="1"></CCol>
     </CRow>
   </CContainer>
   <br />
@@ -147,7 +158,7 @@
 
 <script>
 import { CIcon } from '@coreui/icons-vue'
-import { cilPeople, cilPhone, cilCommentBubble, cilArrowCircleBottom } from '@coreui/icons'
+import { cilPeople, cilPhone, cilCommentBubble, cilArrowCircleBottom, cilMoney } from '@coreui/icons'
 import DoughnutChart from '@/components/DoughnutChart.vue'
 
 export default {
@@ -161,7 +172,8 @@ export default {
       cilPeople,
       cilPhone,
       cilCommentBubble,
-      cilArrowCircleBottom
+      cilArrowCircleBottom,
+      cilMoney
     }
   },
   mounted: function () {
