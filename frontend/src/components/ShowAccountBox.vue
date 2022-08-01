@@ -144,7 +144,7 @@
           <div class='title'>Balance:</div>
           <CIcon :icon="cilMoney" height="36"/>
           <CCol :xs="12">
-            $ {{ $store.state.currentMonetaryBalance }}
+            $ {{ parseFloat($store.state.currentMonetaryBalance).toFixed(2) }}
           </CCol>
           <br />
         </CCard>
