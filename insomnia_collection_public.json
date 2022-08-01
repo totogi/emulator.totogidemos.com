@@ -282,7 +282,7 @@
          "method":"POST",
          "body":{
             "mimeType":"application/graphql",
-            "text":"{\"query\":\"mutation CreateAccount {\\n\\tcreateAccount(\\n\\t\\tinput: { account: \\\"{{ _.accountId }}\\\", providerId: \\\"{{ _.providerId }}\\\" }\\n\\t) {\\n\\t\\t... on InvalidField {\\n\\t\\t\\terrorMessage\\n\\t\\t\\tfieldName\\n\\t\\t\\terrorCode\\n\\t\\t}\\n\\t\\t... on AccountAlreadyExists {\\n\\t\\t\\terrorMessage\\n\\t\\t\\terrorCode\\n\\t\\t\\taccountId\\n\\t\\t}\\n\\t\\t... on AccountNotFound {\\n\\t\\t\\terrorMessage\\n\\t\\t\\taccountId\\n\\t\\t\\terrorCode\\n\\t\\t\\tproviderId\\n\\t\\t}\\n\\t\\t... on CreateAccountPayload {\\n\\t\\t\\t__typename\\n\\t\\t\\taccount {\\n\\t\\t\\t\\tid\\n\\t\\t\\t\\tproviderId\\n\\t\\t\\t}\\n\\t\\t}\\n\\t}\\n}\\n\",\"operationName\":\"CreateAccount\"}"
+            "text":"{\"query\":\"mutation CreateAccount {\\n\\tcreateAccount(\\n\\t\\tinput: { accountId: \\\"{{ _.accountId }}\\\", providerId: \\\"{{ _.providerId }}\\\" }\\n\\t) {\\n\\t\\t... on InvalidField {\\n\\t\\t\\terrorMessage\\n\\t\\t\\tfieldName\\n\\t\\t\\terrorCode\\n\\t\\t}\\n\\t\\t... on AccountAlreadyExists {\\n\\t\\t\\terrorMessage\\n\\t\\t\\terrorCode\\n\\t\\t\\taccountId\\n\\t\\t}\\n\\t\\t... on AccountNotFound {\\n\\t\\t\\terrorMessage\\n\\t\\t\\taccountId\\n\\t\\t\\terrorCode\\n\\t\\t\\tproviderId\\n\\t\\t}\\n\\t\\t... on CreateAccountPayload {\\n\\t\\t\\t__typename\\n\\t\\t\\taccount {\\n\\t\\t\\t\\tid\\n\\t\\t\\t\\tproviderId\\n\\t\\t\\t}\\n\\t\\t}\\n\\t}\\n}\\n\",\"operationName\":\"CreateAccount\"}"
          },
          "parameters":[
             
@@ -492,7 +492,7 @@
          "method":"POST",
          "body":{
             "mimeType":"application/graphql",
-            "text":"{\"query\":\"mutation CreateDevice {\\n\\tcreateDevice(\\n\\t\\tinput: {\\n\\t\\t\\taccountId: \\\"{{ _.accountId }}\\\"\\n\\t\\t\\tproviderId: \\\"{{ _.providerId }}\\\"\\n\\t\\t\\tdevice: \\\"{{ _.deviceId }}\\\"\\n\\t\\t}\\n\\t) {\\n    ... on CreateDevicePayload {\\n      __typename\\n      device {\\n        providerId\\n        id\\n        customData\\n        account {\\n          id\\n          providerId\\n        }\\n      }\\n    }\\n    ... on DeviceAlreadyExists {\\n      errorMessage\\n      errorCode\\n      deviceId\\n    }\\n    ... on AccountNotFound {\\n      errorMessage\\n      providerId\\n      errorCode\\n      accountId\\n    }\\n    ... on InvalidField {\\n      errorMessage\\n      fieldName\\n      errorCode\\n    }\\n  }\\n}\\n\",\"operationName\":\"CreateDevice\"}"
+            "text":"{\"query\":\"mutation CreateDevice {\\n\\tcreateDevice(\\n\\t\\tinput: {\\n\\t\\t\\taccountId: \\\"{{ _.accountId }}\\\"\\n\\t\\t\\tproviderId: \\\"{{ _.providerId }}\\\"\\n\\t\\t\\tdeviceId: \\\"{{ _.deviceId }}\\\"\\n\\t\\t}\\n\\t) {\\n    ... on CreateDevicePayload {\\n      __typename\\n      device {\\n        providerId\\n        id\\n        customData\\n        account {\\n          id\\n          providerId\\n        }\\n      }\\n    }\\n    ... on DeviceAlreadyExists {\\n      errorMessage\\n      errorCode\\n      deviceId\\n    }\\n    ... on AccountNotFound {\\n      errorMessage\\n      providerId\\n      errorCode\\n      accountId\\n    }\\n    ... on InvalidField {\\n      errorMessage\\n      fieldName\\n      errorCode\\n    }\\n  }\\n}\\n\",\"operationName\":\"CreateDevice\"}"
          },
          "parameters":[
             

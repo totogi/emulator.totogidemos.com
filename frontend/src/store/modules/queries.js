@@ -191,7 +191,7 @@ export function createAccountQuery (accountId, providerId) {
   return JSON.stringify({
     query: `mutation CreateAccount {
       createAccount(
-        input: { account: "${accountId}", providerId: "${providerId}" }
+        input: { accountId: "${accountId}", providerId: "${providerId}" }
       ) {
         ... on InvalidField {
           errorMessage
@@ -263,7 +263,7 @@ export function createDeviceQuery (deviceId, accountId, providerId) {
         input: {
           accountId: "${accountId}"
           providerId: "${providerId}"
-          device: "${deviceId}"
+          deviceId: "${deviceId}"
         }
       ) {
         ... on CreateDevicePayload {
